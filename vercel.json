@@ -1,8 +1,5 @@
 {
-    "builds": [
-        {
-            "src": "index.js",
-            "use": "@vercel/node"
-        }
-    ]
-}
+    "buildCommand": "npm install & npm run build",
+    "outputDirectory": "./dist",
+    "run": "node index.js"
+  }
