@@ -15,7 +15,7 @@ dotenv.config(); // configuring .env file
 
 // constants
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 const DB: string | undefined = process.env.DB || "error";
 // exports
 export const SECRET_TOKEN: string | undefined = process.env.USER_SECRET;
