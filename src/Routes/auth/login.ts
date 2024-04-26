@@ -66,7 +66,9 @@ export default async function loginHandler(req: Request, res: Response) {
         res.setHeader('Access-Control-Allow-Credentials', 'true');
         res.cookie('user', userJwtToken, {
            httpOnly: true,
-           sameSite: 'none'
+           secure: true,
+           sameSite: 'none',
+           maxAge: 10 * 24 * 60 * 60 * 1000
         });
 
         return res.status(200).json({
