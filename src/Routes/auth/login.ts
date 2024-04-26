@@ -65,7 +65,8 @@ export default async function loginHandler(req: Request, res: Response) {
         // Set JWT token as a cookie
         res.setHeader('Access-Control-Allow-Credentials', 'true');
         res.cookie('user', userJwtToken, {
-           httpOnly: true
+           httpOnly: true,
+           sameSite: 'none'
         });
 
         return res.status(200).json({
