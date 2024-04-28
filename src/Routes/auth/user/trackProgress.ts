@@ -17,6 +17,7 @@ export default async function trackProgress(req: any, res: Response, next: NextF
             const enrolledCoursesPromises = user.enrolled.map(async (course: any) => {
                 const courseData =  await Course.findById(course.courseId);
                 return {
+                    _id: courseData?._id,
                     title: courseData?.title,
                     author: courseData?.author,
                     enrolledOn: courseData?.uploadDate,
